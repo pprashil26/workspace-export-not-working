@@ -4856,7 +4856,17 @@ select {
   .workspace-tabs { flex-wrap: wrap; }
 }
 
-@media (min-width:760px){.workspace-footer-copy{border-top:1px solid var(--line);padding:10px;text-align:center;background:var(--panel)}.workspace-footer-copy .footer-actions{justify-content:center;display:flex}.workspace-footer-copy .desktop-shortcut-hints{display:flex;justify-content:center;margin-top:6px}}</style>
+@media (min-width:760px){.workspace-footer-copy{border-top:1px solid var(--line);padding:10px;text-align:center;background:var(--panel)}.workspace-footer-copy .footer-actions{justify-content:center;display:flex}.workspace-footer-copy .desktop-shortcut-hints{display:flex;justify-content:center;margin-top:6px}}
+/* Workspace alignment fix */
+@media (min-width:760px){
+.workspace-panel-host .task-row,.workspace-panel-host .task-row.no-move{align-items:start!important;}
+.workspace-panel-host .task-status,.workspace-panel-host .task-highlight{align-self:start!important;margin-top:2px!important;}
+.workspace-panel-host .task-content{align-self:start!important;padding-top:1px!important;}
+.workspace-panel-host .activity-row{align-items:start!important;}
+.workspace-panel-host .activity-status,.workspace-panel-host .activity-highlight{align-self:start!important;margin-top:2px!important;}
+.workspace-panel-host .activity-text{padding-top:1px!important;}
+}
+</style>
 </head>
 <body>
   <div class="capture-toast" id="captureToast" role="status" aria-live="polite" aria-atomic="true"></div>
