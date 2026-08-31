@@ -4857,14 +4857,46 @@ select {
 }
 
 @media (min-width:760px){.workspace-footer-copy{border-top:1px solid var(--line);padding:10px;text-align:center;background:var(--panel)}.workspace-footer-copy .footer-actions{justify-content:center;display:flex}.workspace-footer-copy .desktop-shortcut-hints{display:flex;justify-content:center;margin-top:6px}}
-/* Workspace alignment fix */
-@media (min-width:760px){
-.workspace-panel-host .task-row,.workspace-panel-host .task-row.no-move{align-items:start!important;}
-.workspace-panel-host .task-status,.workspace-panel-host .task-highlight{align-self:start!important;margin-top:2px!important;}
-.workspace-panel-host .task-content{align-self:start!important;padding-top:1px!important;}
-.workspace-panel-host .activity-row{align-items:start!important;}
-.workspace-panel-host .activity-status,.workspace-panel-host .activity-highlight{align-self:start!important;margin-top:2px!important;}
-.workspace-panel-host .activity-text{padding-top:1px!important;}
+
+/* Final Workspace Task and Activity first-row alignment */
+@media (min-width: 760px) {
+  .workspace-panel-host .task-row,
+  .workspace-panel-host .task-row.no-move {
+    grid-template-columns: 24px 24px minmax(0, 1fr) auto;
+    grid-template-rows: auto;
+    grid-template-areas: "check highlight content actions";
+    align-items: start !important;
+  }
+  .workspace-panel-host .task-status,
+  .workspace-panel-host .task-highlight,
+  .workspace-panel-host .task-content,
+  .workspace-panel-host .task-row-actions {
+    align-self: start !important;
+    margin-top: 0 !important;
+  }
+  .workspace-panel-host .task-text {
+    min-height: 24px !important;
+    padding: 0 !important;
+    line-height: 24px !important;
+  }
+  .workspace-panel-host .activity-row {
+    grid-template-columns: 24px 24px minmax(0, 1fr) 24px;
+    grid-template-rows: auto auto;
+    grid-template-areas: "status highlight text delete" ". . time .";
+    align-items: start !important;
+  }
+  .workspace-panel-host .activity-status,
+  .workspace-panel-host .activity-highlight,
+  .workspace-panel-host .activity-text,
+  .workspace-panel-host .activity-delete {
+    align-self: start !important;
+    margin-top: 0 !important;
+  }
+  .workspace-panel-host .activity-text {
+    min-height: 24px !important;
+    padding: 0 !important;
+    line-height: 24px !important;
+  }
 }
 </style>
 </head>
