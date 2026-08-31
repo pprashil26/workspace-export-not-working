@@ -1739,9 +1739,9 @@
 /* Desktop-only brighter theme, sidebar restore bars and Notes Focus scope */
 @media (min-width: 760px) {
   :root {
-    --bg: #f6f7f5;
-    --page: #ffffff;
-    --panel: #fafbf9;
+    --bg: #d4d9d4;
+    --page: #eef1ee;
+    --panel: #dde3dd;
     --ink: #30352f;
     --muted: #6f766d;
     --line: #dfe4df;
@@ -1919,9 +1919,9 @@
 /* Mobile-only brighter warm-white theme */
 @media (max-width: 759px) {
   :root {
-    --bg: #f6f7f5;
-    --page: #ffffff;
-    --panel: #fafbf9;
+    --bg: #d4d9d4;
+    --page: #eef1ee;
+    --panel: #dde3dd;
     --ink: #30352f;
     --muted: #6f766d;
     --line: #dfe4df;
@@ -4850,12 +4850,13 @@ select {
   .notes-sidebar > .sidebar[hidden] { display: none !important; }
   .notes-sidebar > .sidebar .sidebar-head { display: none; }
   .notes-sidebar > .sidebar .calendar-jump { max-width: 420px; padding: 10px 10px 0; }
-  .notes-sidebar > .sidebar .calendar-wrap { max-height: none; padding: 10px; }
+  .notes-sidebar > .sidebar .calendar-wrap { max-height: none; padding: 10px; display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:10px; }
   .notes-sidebar > .sidebar .month { padding: 8px; border: 1px solid var(--line); border-radius: 12px; }
   #workspaceCalendarTab.active { background: #eef3ff; border-color: #b9c8e8; color: #3e5278; }
   .workspace-tabs { flex-wrap: wrap; }
 }
-</style>
+
+@media (min-width:760px){.workspace-footer-copy{border-top:1px solid var(--line);padding:10px;text-align:center;background:var(--panel)}.workspace-footer-copy .footer-actions{justify-content:center;display:flex}.workspace-footer-copy .desktop-shortcut-hints{display:flex;justify-content:center;margin-top:6px}}</style>
 </head>
 <body>
   <div class="capture-toast" id="captureToast" role="status" aria-live="polite" aria-atomic="true"></div>
@@ -5001,6 +5002,10 @@ select {
         <div id="notesList"></div><div class="no-results" id="notesNoResults">No matching notes</div>
       </div>
       <div class="workspace-panel-host" id="workspacePanelHost"></div>
+<div class="workspace-footer-copy">
+<span class="footer-actions"><span>Saved locally on this device</span><span>·</span><button class="plain-btn backup-btn" id="workspaceExportBtn" type="button">Export</button><span>·</span><button class="plain-btn backup-btn" id="workspaceImportBtn" type="button">Import</button><span>·</span><button class="plain-btn backup-btn" id="workspaceHelpBtn" type="button">Help</button></span>
+<div class="desktop-shortcut-hints"><span>Shortcuts:</span><span><strong>GF</strong> Focus</span><span><strong>GT</strong> Today task</span><span><strong>GI</strong> Inbox</span><span><strong>GA</strong> Activity</span><span><strong>GN</strong> New note</span><span><strong>GS</strong> Search</span><span><strong>GL</strong> Labels</span><span><strong>GE</strong> Event</span></div>
+</div>
     </aside>
   </div>
 
@@ -9839,6 +9844,10 @@ if (key === "e") {
 });
         if (document.readyState === "complete") {
             readShareTargetFromUrl();
+const workspaceExportBtn=document.getElementById("workspaceExportBtn"); if(workspaceExportBtn) workspaceExportBtn.addEventListener("click",exportBackup);
+const workspaceImportBtn=document.getElementById("workspaceImportBtn"); if(workspaceImportBtn) workspaceImportBtn.addEventListener("click",()=>importBackupBtn.click());
+const workspaceHelpBtn=document.getElementById("workspaceHelpBtn"); if(workspaceHelpBtn) workspaceHelpBtn.addEventListener("click",openHelp);
+
         } else {
             window.addEventListener("load", readShareTargetFromUrl, { once: true });
         }
