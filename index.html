@@ -4898,6 +4898,26 @@ select {
     line-height: 24px !important;
   }
 }
+
+/* Workspace desktop A4 page width */
+@media (min-width: 760px) {
+  .global-search-wrap,
+  .shell {
+    width: min(210mm, calc(100vw - 24px)) !important;
+    max-width: 210mm !important;
+  }
+  .notes-sidebar,
+  .notes-sidebar.desktop-all-notes,
+  body.workspace-focus-active .notes-sidebar,
+  body.notes-focus-active .notes-sidebar {
+    width: 100% !important;
+    max-width: 210mm !important;
+  }
+  body.workspace-focus-active:not(.global-search-active) .shell,
+  body.notes-focus-active:not(.global-search-active) .shell {
+    max-width: 210mm !important;
+  }
+}
 </style>
 </head>
 <body>
