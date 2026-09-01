@@ -4940,7 +4940,6 @@ body{background:var(--bg)}
 #globalTasksPanel #newTaskBtn{background:var(--selected)!important;border-color:#C7B86F!important;color:#514713!important}
 textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{background:var(--panel)!important;border-left-color:var(--entry-border)!important;color:var(--ink)!important}
 @media(max-width:759px){.modal-backdrop,.mobile-more-backdrop{background:rgba(48,56,46,.24)}}
-/* Task list model: Inbox, This Week, Later, Someday */
 </style>
 </head>
 <body>
@@ -5052,7 +5051,7 @@ textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{bac
             <button class="plain-btn nav-day-btn" id="nextDayBtn" type="button">›</button>
           </div>
         </div>
-        <div class="toolbar"><div class="hint">A lightweight GTD app - empty your mind</div><div class="actions"><button class="plain-btn" id="focusViewBtn" type="button" hidden aria-hidden="true" tabindex="-1" title="Focus view" aria-label="Focus view">⛶</button><button class="plain-btn today-tasks-btn" id="todayTasksBtn" type="button" title="Open This Week tasks">This Week tasks</button><button class="plain-btn print-today-btn" id="printTodayBtn" type="button" title="Print Today card">Print card</button><button class="plain-btn" id="activityBtn" type="button" hidden>Activity</button><button class="plain-btn" id="addTaskInboxBtn" type="button" hidden>+ Inbox</button><button class="plain-btn" id="addTaskTodayBtn" type="button" hidden>+ This Week</button><button class="plain-btn" id="todayBtn" type="button">Today</button></div></div>
+        <div class="toolbar"><div class="hint">A lightweight GTD app - empty your mind</div><div class="actions"><button class="plain-btn" id="focusViewBtn" type="button" hidden aria-hidden="true" tabindex="-1" title="Focus view" aria-label="Focus view">⛶</button><button class="plain-btn today-tasks-btn" id="todayTasksBtn" type="button" title="Open Today tasks">Today tasks</button><button class="plain-btn print-today-btn" id="printTodayBtn" type="button" title="Print Today card">Print card</button><button class="plain-btn" id="activityBtn" type="button" hidden>Activity</button><button class="plain-btn" id="addTaskInboxBtn" type="button" hidden>+ Inbox</button><button class="plain-btn" id="addTaskTodayBtn" type="button" hidden>+ Today</button><button class="plain-btn" id="todayBtn" type="button">Today</button></div></div>
       </header>
       <section class="events-strip" id="eventsStrip" aria-label="Events for selected date"><div class="events-strip-head"><span class="events-strip-title" id="eventsStripTitle">Events</span><div class="events-strip-list" id="eventsStripList"></div><span class="events-strip-actions"><button class="plain-btn" id="viewEventsBtn" type="button">All events</button><button class="plain-btn event-add-link" id="addEventBtn" type="button" title="Add event" aria-label="Add event">+</button></span></div></section>
       <section class="timeline" id="timeline" aria-label="Day planning from 8 AM to midnight"></section>
@@ -5063,7 +5062,7 @@ textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{bac
 >
   <span>Shortcuts:</span>
   <span><strong>GF</strong> Focus</span>
-  <span><strong>GT</strong> This Week task</span>
+  <span><strong>GT</strong> Today task</span>
   <span><strong>GI</strong> Inbox</span>
   <span><strong>GA</strong> Activity</span>
   <span><strong>GN</strong> New note</span>
@@ -5089,7 +5088,7 @@ textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{bac
       <div class="workspace-panel-host" id="workspacePanelHost"></div>
 <div class="workspace-footer-copy">
 <span class="footer-actions"><span>Saved locally on this device</span><span>·</span><button class="plain-btn backup-btn" id="workspaceExportBtn" type="button">Export</button><span>·</span><button class="plain-btn backup-btn" id="workspaceImportBtn" type="button">Import</button><span>·</span><button class="plain-btn backup-btn" id="workspaceHelpBtn" type="button">Help</button></span>
-<div class="desktop-shortcut-hints"><span>Shortcuts:</span><span><strong>GF</strong> Focus</span><span><strong>GT</strong> This Week task</span><span><strong>GI</strong> Inbox</span><span><strong>GA</strong> Activity</span><span><strong>GN</strong> New note</span><span><strong>GS</strong> Search</span><span><strong>GL</strong> Labels</span><span><strong>GE</strong> Event</span></div>
+<div class="desktop-shortcut-hints"><span>Shortcuts:</span><span><strong>GF</strong> Focus</span><span><strong>GT</strong> Today task</span><span><strong>GI</strong> Inbox</span><span><strong>GA</strong> Activity</span><span><strong>GN</strong> New note</span><span><strong>GS</strong> Search</span><span><strong>GL</strong> Labels</span><span><strong>GE</strong> Event</span></div>
 </div>
     </aside>
   </div>
@@ -5214,7 +5213,7 @@ textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{bac
   </div>
 
   <div class="modal-backdrop" id="helpModal" aria-hidden="true">
-    <section class="help-panel" role="dialog" aria-modal="true"><div class="help-head"><p class="help-title">Help</p><button class="plain-btn" id="closeHelpBtn" type="button">Close</button></div><div class="help-body"><div class="help-desktop-content"><h3>Getting Started</h3><ol><li>Use Tasks for actions, Events for date-based commitments, Notes for reference, and Activity for a lightweight work log.</li><li>On mobile, use Today to access the existing Planner.</li><li>Use the workspace tabs to switch between Calendar, Tasks, Notes, Events, and Activity.</li></ol><h3>Tasks</h3><ul><li>Create Tasks in Inbox, This Week, Later, or Someday.</li><li>Use status, highlight, tags, next action, and optional date/time scheduling.</li><li>Link a Task to a new or existing Note.</li><li>Archive completed Tasks and restore them later if needed.</li></ul><h3>Events</h3><ul><li>Create one-time or recurring Events with an optional time, duration, tag, highlight, and next action.</li><li>Timed Events can appear in the Planner.</li><li>Create a Note or link an existing Note to an Event.</li></ul><h3>Notes</h3><ul><li>Select a compact Note row to open it. Use the star to pin or unpin it.</li><li>Use Labels to organise and filter Notes.</li><li>Use Link Note to connect Notes. Links appear under Related Notes.</li><li>Use Edit for writing and formatting, including bullets, numbering, checklists, and horizontal lines.</li></ul><h3>Voice Capture</h3><ul><li>On mobile, open More, then Voice Capture.</li><li>Use the keyboard microphone or type, then save as a Task, Event, Note, or Activity.</li></ul><h3>Planner</h3><ul><li>Select an empty timeblock to add a Task, Event, or Activity.</li><li>Use the status control to mark a block as Planned, In progress, or Done.</li></ul><h3>Backup &amp; Privacy</h3><ul><li>Export regularly to create a complete local backup. Use Import to restore it.</li><li>Data is stored locally on the current device. No account is required.</li></ul><div class="help-note">Install FAST GTD as a PWA for an app-like experience. Local data is specific to the browser or installed app, so keep regular exports.</div></div><div class="help-mobile-content"><h3>Quick Start</h3>
+    <section class="help-panel" role="dialog" aria-modal="true"><div class="help-head"><p class="help-title">Help</p><button class="plain-btn" id="closeHelpBtn" type="button">Close</button></div><div class="help-body"><div class="help-desktop-content"><h3>Getting Started</h3><ol><li>Use Tasks for actions, Events for date-based commitments, Notes for reference, and Activity for a lightweight work log.</li><li>On mobile, use Today to access the existing Planner.</li><li>Use the workspace tabs to switch between Calendar, Tasks, Notes, Events, and Activity.</li></ol><h3>Tasks</h3><ul><li>Create Tasks in Inbox, Today, This month, or Someday.</li><li>Use status, highlight, tags, next action, and optional date/time scheduling.</li><li>Link a Task to a new or existing Note.</li><li>Archive completed Tasks and restore them later if needed.</li></ul><h3>Events</h3><ul><li>Create one-time or recurring Events with an optional time, duration, tag, highlight, and next action.</li><li>Timed Events can appear in the Planner.</li><li>Create a Note or link an existing Note to an Event.</li></ul><h3>Notes</h3><ul><li>Select a compact Note row to open it. Use the star to pin or unpin it.</li><li>Use Labels to organise and filter Notes.</li><li>Use Link Note to connect Notes. Links appear under Related Notes.</li><li>Use Edit for writing and formatting, including bullets, numbering, checklists, and horizontal lines.</li></ul><h3>Voice Capture</h3><ul><li>On mobile, open More, then Voice Capture.</li><li>Use the keyboard microphone or type, then save as a Task, Event, Note, or Activity.</li></ul><h3>Planner</h3><ul><li>Select an empty timeblock to add a Task, Event, or Activity.</li><li>Use the status control to mark a block as Planned, In progress, or Done.</li></ul><h3>Backup &amp; Privacy</h3><ul><li>Export regularly to create a complete local backup. Use Import to restore it.</li><li>Data is stored locally on the current device. No account is required.</li></ul><div class="help-note">Install FAST GTD as a PWA for an app-like experience. Local data is specific to the browser or installed app, so keep regular exports.</div></div><div class="help-mobile-content"><h3>Quick Start</h3>
 <ul>
   <li>+ Task saves a new Task to Inbox.</li>
   <li>+ Note opens simple capture with Labels and Link Note visible.</li>
@@ -5224,7 +5223,7 @@ textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{bac
 <h3>Navigation</h3>
 <ul>
   <li>Today opens the daily Planner.</li>
-  <li>Tasks opens Inbox, This Week, Later, and Someday.</li>
+  <li>Tasks opens Inbox, Today, This month, and Someday.</li>
   <li>Notes opens all Notes and Label filtering.</li>
   <li>More opens Activity, Events, Calendar, Voice Capture, Export, Import, Help, and Share.</li>
 </ul>
@@ -5302,8 +5301,8 @@ textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{bac
         const CALENDAR_COLLAPSED_KEY = "workspace:calendarCollapsed";
         const QUOTE_KEY = "workspace:favouriteQuote";
         const LAST_IMPORT_KEY = "workspace:lastImportAt";
-        const TASK_CONTEXTS = ["Inbox", "This Week", "Later", "Someday"];
-        const LEGACY_TASK_CONTEXTS = ["Inbox", "Home", "Work", "Projects", "Today", "This month"];
+        const TASK_CONTEXTS = ["Inbox", "Today", "This month", "Someday"];
+        const LEGACY_TASK_CONTEXTS = ["Inbox", "Home", "Work", "Projects", "Today"];
         const el = id => document.getElementById(id);
         const globalSearchInput = el("globalSearchInput");
         const globalSearchClear = el("globalSearchClear");
@@ -5598,8 +5597,8 @@ textarea.event-timeblock,textarea.task-timeblock,textarea.activity-timeblock{bac
         let projects = normalizeProjects(loadJson(PROJECTS_KEY, []));
         let activeProjectId = null;
         let activityHideCompleted = localStorage.getItem(ACTIVITY_HIDE_COMPLETED_KEY) === "true";
-        let activeTaskContext = "This Week";
-        if (activeTaskContext === "Home" || activeTaskContext === "Work" || activeTaskContext === "Projects") activeTaskContext = "Later";
+        let activeTaskContext = "Today";
+        if (activeTaskContext === "Home" || activeTaskContext === "Work" || activeTaskContext === "Projects") activeTaskContext = "This month";
         if (!TASK_CONTEXTS.includes(activeTaskContext)) activeTaskContext = "Inbox";
         let activeTaskTagFilter = "";
         let activeTaskDateFilter = "all";
@@ -6788,7 +6787,7 @@ ${reference}` : reference;
             const type = plannerCreateType.value;
             if (type === "task") {
                 const task = { id: createId("task"), text, status: "not-started", done: false, highlighted: false, tags: [], date: dateKey, time: plannerCreateTime, noteLink: null, createdAt: new Date().toISOString() };
-                globalTasks["This Week"].unshift(task); saveTasks(); populateTaskTimeblock(task, false); renderGlobalTasks();
+                globalTasks.Today.unshift(task); saveTasks(); populateTaskTimeblock(task, false); renderGlobalTasks();
             } else if (type === "event") {
                 const event = { id: createId("event"), title: text, highlighted: false, date: dateKey, time: plannerCreateTime, durationMinutes: 30, recurrence: null, seriesId: "", originalDate: "", cancelled: false, createdAt: new Date().toISOString() };
                 events.push(event); saveEvents(); populateEventTimeblock(event, false); renderEvents(); buildCalendar();
@@ -7064,27 +7063,20 @@ currentEntry.text = text.value; autoGrowActivityText(text); saveActivity(); upda
         }
         function normalizeTaskLists(raw) {
             const empty = Object.fromEntries(TASK_CONTEXTS.map(context => [context, []]));
-            if (Array.isArray(raw)) {
-                empty.Inbox = raw.map(task => normalizeTask(task));
+            if (Array.isArray(raw)) { empty.Inbox = raw.map(task => normalizeTask(task)); return empty; }
+            if (!raw || typeof raw !== "object") return empty;
+            const hasLegacyLists = ["Home", "Work", "Projects"].some(context => Array.isArray(raw[context]));
+            if (hasLegacyLists) {
+                empty.Inbox = (raw.Inbox || []).map(task => normalizeTask(task));
+                empty.Today = (raw.Today || []).map(task => normalizeTask(task));
+                ["Home", "Work", "Projects"].forEach(context => {
+                    (raw[context] || []).forEach(task => { const migrated = normalizeTask(task); migrated.tags = normalizeTaskTags(migrated.tags.concat(context)); empty["This month"].push(migrated); });
+                });
+                (raw["This month"] || []).forEach(task => empty["This month"].push(normalizeTask(task)));
+                (raw.Someday || []).forEach(task => empty.Someday.push(normalizeTask(task)));
                 return empty;
             }
-            if (!raw || typeof raw !== "object") return empty;
-            const addAll = (target, items, legacyTag = "") => {
-                (Array.isArray(items) ? items : []).forEach(item => {
-                    const task = normalizeTask(item);
-                    if (legacyTag) task.tags = normalizeTaskTags(task.tags.concat(legacyTag));
-                    empty[target].push(task);
-                });
-            };
-            addAll("Inbox", raw.Inbox);
-            addAll("This Week", raw["This Week"]);
-            addAll("This Week", raw.Today);
-            addAll("Later", raw.Later);
-            addAll("Later", raw["This month"]);
-            addAll("Later", raw.Home, "Home");
-            addAll("Later", raw.Work, "Work");
-            addAll("Later", raw.Projects, "Projects");
-            addAll("Someday", raw.Someday);
+            TASK_CONTEXTS.forEach(context => { if (Array.isArray(raw[context])) empty[context] = raw[context].map(task => normalizeTask(task)); });
             return empty;
         }
         function normalizeArchivedTasks(raw) {
@@ -7092,7 +7084,7 @@ currentEntry.text = text.value; autoGrowActivityText(text); saveActivity(); upda
             return raw.map(item => {
                 const task = normalizeTask(item);
                 task.archivedAt = item.archivedAt && !Number.isNaN(new Date(item.archivedAt).getTime()) ? item.archivedAt : new Date().toISOString();
-                task.sourceContext = TASK_CONTEXTS.includes(item.sourceContext) ? item.sourceContext : (item.sourceContext === "Today" ? "This Week" : (item.sourceContext === "This month" ? "Later" : "Inbox"));
+                task.sourceContext = TASK_CONTEXTS.includes(item.sourceContext) ? item.sourceContext : "Inbox";
                 task.status = "completed";
                 task.done = true;
                 return task;
@@ -7306,16 +7298,16 @@ currentEntry.text = text.value; autoGrowActivityText(text); saveActivity(); upda
                 const restore = document.createElement("button");
                 restore.type = "button";
                 restore.className = "plain-btn task-archive-restore";
-                restore.textContent = "Restore task to This Week";
-                restore.title = "Restore this task to This Week";
-                restore.setAttribute("aria-label", `Restore ${task.text} to This Week`);
+                restore.textContent = "Restore task to Today";
+                restore.title = "Restore this task to Today";
+                restore.setAttribute("aria-label", `Restore ${task.text} to Today`);
                 restore.addEventListener("click", () => {
                     archivedTasks = archivedTasks.filter(item => item.id !== task.id);
                     task.status = "not-started";
                     task.done = false;
                     delete task.archivedAt;
                     delete task.sourceContext;
-                    globalTasks["This Week"].unshift(task);
+                    globalTasks.Today.unshift(task);
                     saveArchivedTasks();
                     saveTasks();
                     renderGlobalTasks();
@@ -7712,7 +7704,7 @@ currentEntry.text = text.value; autoGrowActivityText(text); saveActivity(); upda
                 saveActivity();
             }
             if (backup.preferences && (TASK_CONTEXTS.includes(backup.preferences.activeTaskContext) || LEGACY_TASK_CONTEXTS.includes(backup.preferences.activeTaskContext))) {
-                activeTaskContext = ["Home", "Work", "Projects"].includes(backup.preferences.activeTaskContext) ? "Later" : (backup.preferences.activeTaskContext === "Today" ? "This Week" : (backup.preferences.activeTaskContext === "This month" ? "Later" : backup.preferences.activeTaskContext));
+                activeTaskContext = ["Home", "Work", "Projects"].includes(backup.preferences.activeTaskContext) ? "This month" : backup.preferences.activeTaskContext;
                 localStorage.setItem(TASK_CONTEXT_KEY, activeTaskContext);
             }
             renderGlobalTasks();
@@ -8541,10 +8533,10 @@ ${body}` : title };
             if (focusCapture)
                 setTimeout(() => panel === "tasks" ? newTaskBtn.focus() : panel === "activity" ? activityInput.focus() : eventTitleInput.focus(), 0);
         }
-        function openThisWeekTasksWorkspace() {
+        function openTodayTasksWorkspace() {
             if (isMobileViewport()) return;
             showDesktopWorkspacePanel("tasks");
-            activeTaskContext = "This Week";
+            activeTaskContext = "Today";
             activeTaskTagFilter = "";
             localStorage.setItem(TASK_CONTEXT_KEY, activeTaskContext);
             renderGlobalTasks();
@@ -8623,18 +8615,18 @@ ${body}` : title };
             renderGlobalTasks();
             openNewTaskEditor("Inbox");
         }
-        function openTasksThisWeekShortcut() {
+        function openTasksTodayShortcut() {
             openTasks();
-            activeTaskContext = "This Week";
+            activeTaskContext = "Today";
             localStorage.setItem(TASK_CONTEXT_KEY, activeTaskContext);
             renderGlobalTasks();
-            openNewTaskEditor("This Week");
+            openNewTaskEditor("Today");
         }
-        function openMobileThisWeekTasks() {
+        function openMobileTodayTasks() {
             if (!isMobileViewport())
                 return;
             openTasks();
-            activeTaskContext = "This Week";
+            activeTaskContext = "Today";
             activeTaskTagFilter = "";
             localStorage.setItem(TASK_CONTEXT_KEY, activeTaskContext);
             renderGlobalTasks();
@@ -9107,7 +9099,7 @@ ${body}` : title };
             const dateKey = toKey(today);
             const data = readDateData(dateKey);
             printCardDate.textContent = today.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
-            renderPrintTasks(orderTasks(globalTasks["This Week"] || []).filter(task => task.date === dateKey));
+            renderPrintTasks(orderTasks(globalTasks.Today || []));
             const entries = data.entries && typeof data.entries === "object" ? data.entries : {};
             renderPrintTimeblocks(entries);
         }
@@ -9538,7 +9530,7 @@ ${body}` : title };
             setMobileSection("calendar");
             alignMobileCalendarToCurrentMonth();
         });
-        mobileTasksBtn.addEventListener("click", openMobileThisWeekTasks);
+        mobileTasksBtn.addEventListener("click", openMobileTodayTasks);
         mobileNotesBtn.addEventListener("click", () => {
             mobileNotesAll = true;
             notesBinOpen = false;
@@ -9647,7 +9639,7 @@ ${body}` : title };
         eventModal.addEventListener("click", event => { if (event.target === eventModal) closeEventEditor(); });
         activityBtn.addEventListener("click", openActivity);
         addTaskInboxBtn.addEventListener("click", openTasksInboxShortcut);
-        addTaskTodayBtn.addEventListener("click", openTasksThisWeekShortcut);
+        addTaskTodayBtn.addEventListener("click", openTasksTodayShortcut);
         clearDoneTasksBtn.addEventListener("click", clearDoneTasks);
         taskArchiveBtn.addEventListener("click", openTaskArchive);
         closeTaskArchiveBtn.addEventListener("click", closeTaskArchive);
@@ -9728,7 +9720,7 @@ ${body}` : title };
   }
 });
 
-        todayTasksBtn.addEventListener("click", openThisWeekTasksWorkspace);
+        todayTasksBtn.addEventListener("click", openTodayTasksWorkspace);
         printTodayBtn.addEventListener("click", printTodayCard);
         todayBtn.addEventListener("click", () => { const today = getToday(); if (isWithinRange(today))
             selectDate(today, true); });
@@ -9798,7 +9790,7 @@ ${body}` : title };
         if (!isMobileViewport()) {
             desktopCalendarCollapsed = true;
             setSidebarCollapsed(sidebar, sidebarToggle, "left-collapsed", true);
-            activeTaskContext = "This Week";
+            activeTaskContext = "Today";
             activeTaskTagFilter = "";
             localStorage.setItem(TASK_CONTEXT_KEY, activeTaskContext);
             showDesktopWorkspacePanel("tasks");
