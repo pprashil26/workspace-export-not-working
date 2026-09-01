@@ -5043,6 +5043,103 @@ textarea.activity-timeblock:hover, textarea.activity-timeblock:focus {
 @media (max-width: 759px) {
   .modal-backdrop, .mobile-more-backdrop { background: rgba(48, 56, 46, .24); }
 }
+
+/* Workspace Calm Sage v2: white content and entry surfaces */
+:root {
+  --page: #FFFFFF;
+  --entry: #FFFFFF;
+}
+/* Main A4 sheet and actual working content stay white. */
+.notes-sidebar,
+.notes-sidebar.collapsed,
+.notes-sidebar.desktop-all-notes,
+.notes-sidebar > .sidebar,
+.notes-wrap,
+.workspace-panel-host,
+.workspace-panel-host .tasks-panel,
+.workspace-panel-host .activity-panel,
+.workspace-panel-host .events-panel,
+.calendar-wrap,
+.month,
+.note-card,
+.all-notes-card,
+.note-body,
+.expanded-body,
+.task-row,
+.activity-row,
+.event-row,
+.event-strip-item,
+.global-result-card,
+.project-card,
+.project-item,
+.task-note-picker-item,
+.task-archive-card,
+.slot,
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="month"],
+input[type="number"],
+textarea,
+select {
+  background-color: #FFFFFF !important;
+}
+/* Calendar date area is white; only meaningful date states use the accent. */
+.day-btn,
+.day-btn.weekend {
+  background: #FFFFFF !important;
+}
+.day-btn.has-events,
+.day-btn.today,
+.day-btn.selected,
+.day-btn.has-events.today,
+.day-btn.has-events.selected,
+.day-btn.today.selected {
+  background: var(--selected) !important;
+}
+/* Highlighted entries remain white and are indicated structurally. */
+.note-card.is-pinned,
+.note-card.is-pinned .note-title-area,
+.note-card.is-pinned .note-tools-row,
+.notes-sidebar.notes-compact .note-card.is-pinned .note-title-area,
+.task-row.highlighted,
+.task-row.is-highlighted,
+.task-row.task-highlighted,
+.activity-row.highlighted,
+.event-row.highlighted,
+.event-today {
+  background: #FFFFFF !important;
+}
+/* Preserve olive chrome and controls around the white content. */
+.notes-head,
+.sidebar-head,
+.workspace-footer-copy,
+.note-title-area,
+.note-tools-row,
+.quote-block,
+footer,
+.global-results-head,
+.note-project-row,
+.task-note-section,
+.event-recurrence-options,
+.task-archive-head {
+  background: var(--panel) !important;
+}
+/* Keep modal shells white while headers and controls use the standard olive. */
+.expanded-note,
+.move-note-panel,
+.help-panel,
+.label-panel,
+.event-editor-panel,
+.task-editor-panel,
+.planner-create-panel,
+.project-panel,
+.task-note-picker-panel,
+.voice-capture-panel,
+.share-target-panel,
+.mobile-more-sheet {
+  background: #FFFFFF !important;
+}
 </style>
 </head>
 <body>
