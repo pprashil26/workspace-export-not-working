@@ -7125,6 +7125,8 @@ currentEntry.text = text.value; autoGrowActivityText(text); saveActivity(); upda
                 return task;
             });
             return list.sort((a, b) => {
+                if (a.highlighted !== b.highlighted)
+                    return a.highlighted ? -1 : 1;
                 const aScheduled = Boolean(a.date && a.time);
                 const bScheduled = Boolean(b.date && b.time);
                 if (aScheduled !== bScheduled)
