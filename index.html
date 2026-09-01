@@ -5140,6 +5140,54 @@ footer,
 .mobile-more-sheet {
   background: #FFFFFF !important;
 }
+
+/* Workspace Task toolbar refinement: quiet white controls */
+#globalTasksPanel .task-context-btn,
+#globalTasksPanel .task-date-filter-chip,
+#globalTasksPanel .task-tag-filter-chip,
+#globalTasksPanel .project-link-btn,
+#globalTasksPanel .task-archive-completed-btn,
+#globalTasksPanel .task-archive-btn,
+#globalTasksPanel .task-filter-row select,
+#globalTasksPanel .task-tag-filter {
+  background: #FFFFFF !important;
+  border: 1px solid #AEB9A8 !important;
+  color: #384236 !important;
+  box-shadow: none !important;
+}
+#globalTasksPanel .task-context-btn:hover,
+#globalTasksPanel .task-context-btn:focus-visible,
+#globalTasksPanel .task-date-filter-chip:hover,
+#globalTasksPanel .task-date-filter-chip:focus-visible,
+#globalTasksPanel .task-tag-filter-chip:hover,
+#globalTasksPanel .task-tag-filter-chip:focus-visible,
+#globalTasksPanel .project-link-btn:hover,
+#globalTasksPanel .project-link-btn:focus-visible,
+#globalTasksPanel .task-archive-completed-btn:hover,
+#globalTasksPanel .task-archive-completed-btn:focus-visible,
+#globalTasksPanel .task-archive-btn:hover,
+#globalTasksPanel .task-archive-btn:focus-visible {
+  background: #FFFFFF !important;
+  border-color: #879481 !important;
+  color: #263024 !important;
+}
+/* Active filters remain white; selection is conveyed with a darker border and text. */
+#globalTasksPanel .task-context-btn.active,
+#globalTasksPanel .task-date-filter-chip.active,
+#globalTasksPanel .task-tag-filter-chip.active,
+#globalTasksPanel .task-archive-btn.active {
+  background: #FFFFFF !important;
+  border-color: #6F7E69 !important;
+  color: #263024 !important;
+  font-weight: 750 !important;
+  box-shadow: inset 0 -2px 0 #6F7E69 !important;
+}
+/* Keep the add-task action as the single accent in the Task toolbar. */
+#globalTasksPanel #newTaskBtn {
+  background: var(--selected) !important;
+  border-color: #C7B86F !important;
+  color: #514713 !important;
+}
 </style>
 </head>
 <body>
